@@ -4,7 +4,7 @@
 	"author" : "citizenhub",
 
 	"files" : {
-		"css" : ["css/bootstrap", "css/fonts/stylesheet"],
+		"css" : ["css/bootstrap", "css/fonts/stylesheet", "css/style"],
 		"js" : []
 	},
 
@@ -16,10 +16,12 @@
 		},
 		{
 			"path": "/questions",
+			"layout" : "layouts/main",
 			"template": "questions"
 		},
 		{
 			"path" : "/question/:id",
+			"layout" : "layouts/main",
 			"template" : "singleQuestion",
 			"controller" : "singleQuestion"
 		},

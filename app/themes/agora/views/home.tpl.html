@@ -1,1 +1,24 @@
-<button logged-out ng-click="login()">Login</button>
+
+<div id="scroll-area" class="iscroll-pages" scrollable parameters="{{ {
+	snap: '.iscroll-page',
+	momentum: false,
+	vScroll: false,
+	hScroll: true,
+	hScrollbar: false,
+	vScrollbar: false,
+	bounce: true
+} }}" curr-page-x="x" curr-page-y="y">
+	<ul plus-resize>
+		<li style="width: {{ window.width }}px">
+			<div id="page-one" class="iscroll-page">
+				<!-- Page One -->
+				<button logged-out ng-click="login()">Login</button>
+			</div>
+		</li>
+		<li style="width: {{ window.width }}px">
+			<div id="page-two" class="iscroll-page">
+				<!-- Page Two -->
+			</div>
+		</li>
+	</ul>
+</div>

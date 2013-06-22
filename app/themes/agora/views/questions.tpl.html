@@ -1,8 +1,13 @@
 <plus-data collection="questions">
+	<input type="text" ng-model="search">
+	<br>
 	<ul>
-		<li ng-repeat="question in collection.data">
-			{{ question }}
+		<li ng-repeat="question in collection.data | filter:search">
+			{{ question.text }}
+			<span ng-init="{{ editPath = '/question/'+ question.id }}" ng-click="$navigate.go('{{ editPath }}')">{{editPath}}</span>
 		</li>
 		<li ng-hide="collection.data">No Questions Found</li>
 	</ul>
 </plus-data>
+
+{{ auth }}
