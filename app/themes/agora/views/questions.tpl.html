@@ -4,10 +4,9 @@
 	<ul>
 		<li ng-repeat="question in collection.data | filter:search">
 			{{ question.text }}
-			<span ng-init="{{ editPath = '/question/'+ question.id }}" ng-click="$navigate.go('{{ editPath }}')">{{editPath}}</span>
+			<span ng-init="path = '/answer/' + question.id" ng-click="$navigate.go(path)">Answer</span>
 		</li>
 		<li ng-hide="collection.data">No Questions Found</li>
 	</ul>
 </plus-data>
 
-{{ auth }}

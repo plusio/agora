@@ -17,13 +17,20 @@
 		{
 			"path": "/questions",
 			"layout" : "layouts/main",
-			"template": "questions"
+			"template": "questions",
+			"controller":"questionsController"
 		},
 		{
-			"path" : "/question/:id",
+			"path" : "/answer/:id",
 			"layout" : "layouts/main",
-			"template" : "singleQuestion",
-			"controller" : "singleQuestion"
+			"template" : "answerQuestion",
+			"controller" : "answerQuestion"
+		},
+		{
+			"path" : "/question/new",
+			"layout" : "layouts/main",
+			"template" : "newQuestion",
+			"controller" : "newQuestion"
 		},
 		{
 			"otherwise" : "/"
