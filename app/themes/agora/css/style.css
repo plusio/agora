@@ -41,9 +41,17 @@ html, body {
 	 */
 }
 
+.mp-page{
+
+	background: url('../img/fabric.png');
+	background-size: 410px 410px;
+}
 #wrapper {
-	position: relative;
-	top: 20px;
+	position: absolute;
+	top: 80px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
 }
 
 .iscroll-page{
@@ -166,18 +174,24 @@ html, body {
 
 
 .yes {
+	position: absolute;
+	bottom: 30px;
+	left: 0px;
 	display: inline-block;
 	height: 271px;
-	width: 160px;
+	width: 180px;
 	background: url('../img/yes.png') left top;
 	background-repeat: no-repeat;
 	background-size: auto 271px;
 }
 
 .no {
+	position: absolute;
+	bottom: 30px;
+	right: 0px;
 	display: inline-block;
 	height: 271px;
-	width: 160px;
+	width: 180px;
 	background: url('../img/no.png') right top;
 	background-repeat: no-repeat;
 	background-size: auto 271px;
@@ -185,6 +199,18 @@ html, body {
 
 
 #map{
-		height: 100%;
-		width: 100%;
+	position: absolute;
+	top: 60px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
 	}
+
+.or {
+	position: absolute;
+	bottom: 145px;
+	left: 50%;
+	margin-left: -20px;
+	width: 40px;
+	height: 40px;
+}
