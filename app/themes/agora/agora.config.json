@@ -4,17 +4,27 @@
 	"author" : "citizenhub",
 
 	"files" : {
-		"css" : ["css/bootstrap", "css/fonts/stylesheet", "css/style"],
+		"css" : ["css/bootstrap", "css/fonts/stylesheet"],
 		"js" : []
 	},
 
 	"routes" : [
 		{
 			"path" : "/",
-			"template" : "home"
+			"template" : "home",
+			"controller" : "homeController"
 		},
 		{
-			"otherwise" : "/home"
+			"path": "/questions",
+			"template": "questions"
+		},
+		{
+			"path" : "/question/:id",
+			"template" : "singleQuestion",
+			"controller" : "singleQuestion"
+		},
+		{
+			"otherwise" : "/"
 		}
 	]
 }

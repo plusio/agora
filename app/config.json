@@ -1,39 +1,20 @@
 {
 	"name" : "Agora",
-	"client_id" : "",
+	"client_id" : "139349701769.apps.googleusercontent.com",
 	"client_secret" : "",
 	"client_scope" : "",
-	"client_redirect" : "",
+	"client_redirect" : "http://localhost:8888/agora/",
 	"server_url" : "http://openplusapp.appspot.com/",
-	"environment" : "development", // development / production
+	"environment" : "development",
 
-	/*
-	 * Specify the name of the selected theme
-	 */
 	"theme" : "agora",
 
-  	/*
-	 * The data collections this application will be interacting with. 
-	 * This is used while syncing data between local storage & rest-based backend 
-	 * for previously failed attempts to store create/update/delete based requests.
-	 */
 	"restEntities" : [],
 
-	/* 
-	 * This defines in milliseconds, how often the queue should attempt to "sync" the data with rest backend.
-	 * The current default is 10 minutes, and cannot be less than 10 seconds
-	 */
 
 	"syncLoopDelay" : 999999999,
 
-	/*
-	 * plugins add to the functionality of Tyto
-	 */
 	"plugins" : ["leaflet"],
 
-	/*
-	 * You shouldn't need to change these unless you split your functions into multiple files
-	 * or rename these files to something other than the default.
-	 */
 	"scripts" : ["controllers"]
 }
