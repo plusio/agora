@@ -37,6 +37,11 @@
 			"template" : "logout"
 		},
 		{
+			"path" : "/map/:questionId",
+			"template" : "map",
+			"controller" : "mapController"
+		},
+		{
 			"otherwise" : "/"
 		}
 	]

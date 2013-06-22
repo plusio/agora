@@ -62,7 +62,25 @@ $app.controller('answerQuestion', function($scope, $routeParams, plus, auth, geo
 			response : answer,
 
 		}).then(function(){
-			$scope.$navigate.go('/questions', 'slide', true);
+			$scope.$navigate.go('/map/'+$routeParams.id);
 		});
 	}
+});
+
+$app.controller('mapController', function($scope, plus, $routeParams){
+	plus.collection('answers', {filter:"questionId", value:$routeParams.questionId}).then(function(data){
+		_.each(data, function(item){
+			var marker = L.circleMarker([item.lat, item.lng], {
+				stroke : false,
+				fillOpacity : 0.6,
+				fillColor : (item.response)?'blue':'red',
+			}).setRadius(5).bindPopup(item.response.toString()).addTo(map);
+		});
+	});
+
+	setTimeout(function(){
+	
+	}, 500);
+
+
 });
