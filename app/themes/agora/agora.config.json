@@ -1,0 +1,20 @@
+{
+
+	"title" : "Agora",
+	"author" : "citizenhub",
+
+	"files" : {
+		"css" : ["css/bootstrap", "css/fonts/stylesheet", "css/style"],
+		"js" : []
+	},
+
+	"routes" : [
+		{
+			"path" : "/",
+			"template" : "home"
+		},
+		{
+			"otherwise" : "/home"
+		}
+	]
+}
