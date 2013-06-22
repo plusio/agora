@@ -1,10 +1,12 @@
 <plus-data collection="questions">
-	<input type="text" ng-model="search">
+	<div class="filter">
+		<input type="text" placholder="Search" ng-model="search">
+	</div>
 	<br>
-	<ul>
+	<ul class="question_list">
 		<li ng-repeat="question in collection.data | filter:search">
 			{{ question.text }}
-			<span ng-init="path = '/answer/' + question.id" ng-click="$navigate.go(path)">Answer</span>
+			<span ng-init="path = '/answer/' + question.id" ng-click="$navigate.go(path)"><img class="vote" src="app/themes/agora/img/support.png" /></span>
 		</li>
 		<li ng-hide="collection.data">No Questions Found</li>
 	</ul>

@@ -3,7 +3,7 @@
 	"client_id" : "139349701769.apps.googleusercontent.com",
 	"client_secret" : "",
 	"client_scope" : "https://www.googleapis.com/auth/userinfo.profile",
-	"client_redirect" : "http://localhost:8888/agora/",
+	"client_redirect" : "http://localhost/agora/",
 	"server_url" : "http://openplusapp.appspot.com/",
 	"environment" : "development",
 
