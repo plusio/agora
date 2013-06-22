@@ -17,8 +17,7 @@
 		{
 			"path": "/questions",
 			"layout" : "layouts/main",
-			"template": "questions",
-			"controller":"questionsController"
+			"template": "questions"
 		},
 		{
 			"path" : "/answer/:id",
@@ -31,6 +30,11 @@
 			"layout" : "layouts/main",
 			"template" : "newQuestion",
 			"controller" : "newQuestion"
+		},
+		{
+			"path" : "/logout",
+			"controller" : "logoutController",
+			"template" : "logout"
 		},
 		{
 			"otherwise" : "/"

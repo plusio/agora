@@ -1,12 +1,15 @@
-<plus-data collection="questions">
-	<input type="text" ng-model="search">
-	<br>
-	<ul>
-		<li ng-repeat="question in collection.data | filter:search">
-			{{ question.text }}
-			<span ng-init="path = '/answer/' + question.id" ng-click="$navigate.go(path)">Answer</span>
-		</li>
-		<li ng-hide="collection.data">No Questions Found</li>
-	</ul>
-</plus-data>
+<logged-in>
+	<plus-data collection="questions">
+		<input type="text" ng-model="search">
+		<br>
+		<ul>
+			<li ng-repeat="question in collection.data | filter:search">
+				{{ question.text }}
+				<span ng-init="path = '/answer/' + question.id" ng-click="$navigate.go(path)">Answer</span>
+			</li>
+			<li ng-hide="collection.data">No Questions Found</li>
+		</ul>
+	</plus-data>
+</logged-in>
+ <span logged-out ng-click="$navigate.go('/', 'slide', true)">Please log in (click here)</span>
 
